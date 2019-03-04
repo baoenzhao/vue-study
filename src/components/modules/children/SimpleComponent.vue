@@ -1,8 +1,8 @@
 <!--  -->
 <template>
-  <div id="von">
+  <div id="simplecomponent">
       <simplecom title="情报人员列表" :arr="arr"></simplecom>
-      <br/>>
+      <br/>
       <p>使用了一个简单的组件进行显示</p>
   </div>
 </template>
@@ -11,7 +11,7 @@
 import SimpleCom from '../../views/SimpleCom';
 
 export default {
-  name: "von",
+  name: "simplecomponent",
   components: {
       "simplecom": SimpleCom
   },
