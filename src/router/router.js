@@ -9,6 +9,9 @@ import Vshow from '@/components/modules/children/Vshow'
 import Vfor from '@/components/modules/children/Vfor'
 import Von from '@/components/modules/children/Von'
 import SimpleComponent from '@/components/modules/children/SimpleComponent'
+import LifeMethod from '@/components/modules/children/LifeMethod'
+import Vonce from '@/components/modules/children/Vonce'
+import Vhtml from '@/components/modules/children/Vhtml'
 
 Vue.use(VueRouter)//使用路由
 
@@ -50,6 +53,18 @@ const router = new VueRouter({
                 {
                     path: "simplecomponent",
                     component: SimpleComponent
+                },
+                {
+                    path: "lifemethod",
+                    component: LifeMethod
+                },
+                {
+                    path: "vonce",
+                    component: Vonce
+                },
+                {
+                    path: "vhtml",
+                    component: Vhtml
                 }
             ]
         }//Path 路径 component 相应的组件 

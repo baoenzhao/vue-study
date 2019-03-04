@@ -33,6 +33,18 @@
             {
                 "name": "简单的组件使用",
                 "path": "/simplecomponent"
+            },
+            {
+                "name": "钩子函数",
+                "path": "/lifemethod"
+            },
+            {
+                "name": "v-once",
+                "path": "/vonce"
+            },
+            {
+                "name": "v-html",
+                "path": "/vhtml"
             }
         ]
     },
