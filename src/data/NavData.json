@@ -1,0 +1,43 @@
+[
+    {
+        "name": "vue基础",
+        "sub": [
+            {
+                "name": "赋值",
+                "path": "/evaluate"
+            },
+            {
+                "name": "v-bind",
+                "path": "/vbind"
+            },
+            {
+                "name": "v-model",
+                "path": "/vmodel"
+            },
+            {
+                "name": "v-if",
+                "path": "/vif"
+            },
+            {
+                "name": "v-show",
+                "path": "/vshow"
+            },
+            {
+                "name": "v-for",
+                "path": "/vfor"
+            },
+            {
+                "name": "v-on",
+                "path": "/von"
+            },
+            {
+                "name": "简单的组件使用",
+                "path": "/simplecomponent"
+            }
+        ]
+    },
+    {
+        "name": "vue-router",
+        "sub": []
+    }
+]
