@@ -1,9 +1,13 @@
 <!--  -->
 <template>
   <div id="vif">
-    <button @click="showClick">点我</button>
-    <h1 v-if="show">帅气如我</h1>
+    <button @click="showClick1">点我</button>
+    <h1 v-if="show1">帅气如我</h1>
     <p>v-if可以控制标签的隐藏/显示，使用v-if相当于创建/销毁标签，在没显示之前这个标签就是不存在的，显示后即存在</p>
+    <button @click="showClick2">点我</button>
+    <h1 v-if="show2">帅气如我</h1>
+    <h1 v-else>霸气如我</h1>
+    <p>v-if和if一样，也能使用v-else，v-else-if，</p>
   </div>
 </template>
 
@@ -17,7 +21,8 @@ export default {
   components: {},
   data() {
     return {
-      show: false
+      show1: false,
+      show2: false
     };
   },
   //计算属性
@@ -25,8 +30,11 @@ export default {
   //监控data中的数据变化
   watch: {},
   methods: {
-    showClick: function() {
-      this.show = !this.show;
+    showClick1: function() {
+      this.show1 = !this.show1;
+    },
+    showClick2: function() {
+      this.show2 = !this.show2;
     }
   },
   //生命周期 - 创建完成（可以访问当前this实例）

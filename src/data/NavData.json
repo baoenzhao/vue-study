@@ -65,6 +65,22 @@
             {
                 "name": "class的动态改变",
                 "path": "/dynamicclass"
+            },
+            {
+                "name": "style的动态改变",
+                "path": "/dynamicstyle"
+            },
+            {
+                "name": "key管理复用元素",
+                "path": "/keyreuse"
+            },
+            {
+                "name": "数组更新检测",
+                "path": "/arrayupdate"
+            },
+            {
+                "name": "动态添加属性",
+                "path": "/objaddattr"
             }
         ]
     },
