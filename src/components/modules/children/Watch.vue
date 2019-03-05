@@ -1,10 +1,10 @@
 <!--  -->
 <template>
-<div id='vhtml'>
-    <textarea cols="30" rows="10" v-model="content"></textarea>
-    <div v-html="content">
-    </div>
-    <p>v-html可以将变量的内容变为html标签，尝试在输入框中输入html语句，改变上方内容渲染</p>
+<div id='watch'>
+    <input type="text" placeholder="输入内容改变变量" v-model="name">
+    <h1>{{name}}</h1>
+    <div v-html="content"></div>
+    <p>侦听属性可以监听数据变化，当属性变化时，侦听属性就会执行</p>
 </div>
 </template>
 
@@ -12,15 +12,21 @@
 //import 《组件名称》 from '《组件路径》';
 
 export default {
-name:'vhtml',
+name:'watch',
 components: {},
 data() {
 return {
-    content: "<p>我是html内容<p>"
+    name: "我是变量",
+    content: ""
 };
 },
 computed: {},
-watch: {},
+watch: {
+    name: function (newValue, oldValue) {
+        this.name = newValue;
+        this.content = "<h1>新的值:" + newValue + " " + "旧的值:" + oldValue + "</h1>";
+    }
+},
 methods: {
 
 },
@@ -42,4 +48,5 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
 <style scoped>
+
 </style>

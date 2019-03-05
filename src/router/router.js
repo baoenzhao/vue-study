@@ -12,6 +12,11 @@ import SimpleComponent from '@/components/modules/children/SimpleComponent'
 import LifeMethod from '@/components/modules/children/LifeMethod'
 import Vonce from '@/components/modules/children/Vonce'
 import Vhtml from '@/components/modules/children/Vhtml'
+import Dynamicparam from '@/components/modules/children/Dynamicparam'
+import Modifier from '@/components/modules/children/Modifier'
+import Computer from '@/components/modules/children/Computer'
+import Watch from '@/components/modules/children/Watch'
+import DynamicClass from '@/components/modules/children/DynamicClass'
 
 Vue.use(VueRouter)//使用路由
 
@@ -65,10 +70,34 @@ const router = new VueRouter({
                 {
                     path: "vhtml",
                     component: Vhtml
+                },
+                {
+                    path: "dynamicparam",
+                    component: Dynamicparam
+                },
+                {
+                    path: "modifier",
+                    component: Modifier
+                },
+                {
+                    path: "computer",
+                    component: Computer
+                },
+                {
+                    path: "watch",
+                    component: Watch
+                },
+                {
+                    path: "dynamicclass",
+                    component: DynamicClass
                 }
             ]
         }//Path 路径 component 相应的组件 
     ]
+})
+
+router.afterEach((to, from, next)=>{
+    window.scroll(0, 0);//跳转到顶部
 })
 
 export default router
