@@ -1,22 +1,18 @@
 <!--  -->
 <template>
-  <div id="simplecom">
-    <h1>{{title}}</h1>
-    <ul>
-      <li v-for="obj in arr" :key="obj.id">编号{{obj.id}} {{obj.name}}</li>
-    </ul>
+  <div id="propvalidate">
+    <prop-com param3="必须填入的值"></prop-com>
   </div>
 </template>
 
 <script>
 //import 《组件名称》 from '《组件路径》';
+import PropCom from "../../views/PropCom";
 
 export default {
-  name: "simplecom",
-  components: {},
-  props: {
-    title: String,
-    arr: Array
+  name: "propvalidate",
+  components: {
+    PropCom
   },
   data() {
     return {};
@@ -38,8 +34,4 @@ export default {
 };
 </script>
 <style scoped>
-#simplecom {
-  background-image: url(../../assets/bk.jpg);
-  color: white;
-}
 </style>

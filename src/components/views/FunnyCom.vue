@@ -1,10 +1,12 @@
 <!--  -->
 <template>
-  <div id="simplecom">
-    <h1>{{title}}</h1>
-    <ul>
-      <li v-for="obj in arr" :key="obj.id">编号{{obj.id}} {{obj.name}}</li>
-    </ul>
+  <div id="funny-com">
+    <p style="font-size:20px;">
+      <img class="smile" src="../../assets/smile.png" alt="笑脸">
+      <slot></slot>
+      <img class="smile" src="../../assets/smile.png" alt="笑脸">
+    </p>
+    <p>插槽很简单，只要用{{message}}包裹即可</p>
   </div>
 </template>
 
@@ -12,14 +14,12 @@
 //import 《组件名称》 from '《组件路径》';
 
 export default {
-  name: "simplecom",
+  name: "funny-com",
   components: {},
-  props: {
-    title: String,
-    arr: Array
-  },
   data() {
-    return {};
+    return {
+        message: "<slot></slot>"
+    };
   },
   computed: {},
   watch: {},
@@ -38,8 +38,8 @@ export default {
 };
 </script>
 <style scoped>
-#simplecom {
-  background-image: url(../../assets/bk.jpg);
-  color: white;
+.smile {
+  width: 30px;
+  height: 30px;
 }
 </style>

@@ -1,10 +1,16 @@
 <!--  -->
 <template>
-  <div id="simplecom">
-    <h1>{{title}}</h1>
-    <ul>
-      <li v-for="obj in arr" :key="obj.id">编号{{obj.id}} {{obj.name}}</li>
-    </ul>
+  <div id="input-inside">
+    <label for="inside">我是组件的标题</label>
+    <input
+      :value="value"
+      v-on="inputListerners"
+      v-bind="$attrs"
+      type="text"
+      name="inside"
+      id="inside"
+      placeholder="输入内容"
+    >
   </div>
 </template>
 
@@ -12,16 +18,24 @@
 //import 《组件名称》 from '《组件路径》';
 
 export default {
-  name: "simplecom",
-  components: {},
+  name: "input-inside",
   props: {
-    title: String,
-    arr: Array
+    value: String
   },
+  components: {},
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+    inputListerners: function() {
+      var self = this;
+      return Object.assign({}, this.$listeners, {
+        input: function(event) {
+          self.$emit("input", event.target.value); //配合使用v-model
+        }
+      });
+    }
+  },
   watch: {},
   methods: {},
   //生命周期 - 创建完成（可以访问当前this实例）
@@ -38,8 +52,4 @@ export default {
 };
 </script>
 <style scoped>
-#simplecom {
-  background-image: url(../../assets/bk.jpg);
-  color: white;
-}
 </style>

@@ -18,6 +18,14 @@ import DynamicStyle from '@/components/modules/children/DynamicStyle'
 import KeyReuse from '@/components/modules/children/KeyReuse'
 import ArrayUpdate from '@/components/modules/children/ArrayUpdate'
 import ObjAddAttr from '@/components/modules/children/ObjAddAttr'
+import EmitCom from '@/components/modules/children/EmitCom'
+import VmodelCom from '@/components/modules/children/VmodelCom'
+import SlotCom from '@/components/modules/children/SlotCom'
+import IsDynamicCom from '@/components/modules/children/IsDynamicCom'
+import IsInsideCom from '@/components/modules/children/IsInsideCom'
+import Propvalidate from '@/components/modules/children/Propvalidate'
+import InputListeners from '@/components/modules/children/InputListeners'
+import SyncProp from '@/components/modules/children/SyncProp'
 
 var array = [
     {
@@ -99,6 +107,38 @@ var array = [
     {
         path: "objaddattr",
         component: ObjAddAttr
+    },
+    {
+        path: "emitcom",
+        component: EmitCom
+    },
+    {
+        path: "vmodelcom",
+        component: VmodelCom
+    },
+    {
+        path: "slotcom",
+        component: SlotCom
+    },
+    {
+        path: "isdynamiccom",
+        component: IsDynamicCom
+    },
+    {
+        path: "isinsidecom",
+        component: IsInsideCom
+    },
+    {
+        path: "propvalidate",
+        component: Propvalidate
+    },
+    {
+        path: "inputlisteners",
+        component: InputListeners
+    },
+    {
+        path: "syncprop",
+        component: SyncProp
     }
 ];
 

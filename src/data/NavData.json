@@ -31,10 +31,6 @@
                 "path": "/von"
             },
             {
-                "name": "简单的组件使用",
-                "path": "/simplecomponent"
-            },
-            {
                 "name": "钩子函数",
                 "path": "/lifemethod"
             },
@@ -85,7 +81,44 @@
         ]
     },
     {
-        "name": "vue-router",
-        "sub": []
+        "name": "组件",
+        "sub": [
+            {
+                "name": "简单的组件使用",
+                "path": "/simplecomponent"
+            },
+            {
+                "name": "组件自定义事件",
+                "path": "/emitcom"
+            },
+            {
+                "name": "组件使用v-model",
+                "path": "/vmodelcom"
+            },
+            {
+                "name": "组件插槽",
+                "path": "/slotcom"
+            },
+            {
+                "name": "is：动态组件",
+                "path": "/isdynamiccom"
+            },
+            {
+                "name": "is：元素内部使用",
+                "path": "/isinsidecom"
+            },
+            {
+                "name": "prop验证",
+                "path": "/propvalidate"
+            },
+            {
+                "name": "组件内input事件监听",
+                "path": "/inputlisteners"
+            },
+            {
+                "name": ".syns：组件内双向绑定",
+                "path": "/syncprop"
+            }
+        ]
     }
 ]
