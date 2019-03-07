@@ -1,32 +1,32 @@
 <!--  -->
 <template>
-<div id='slot-com'>
-    <funny-com>我插入成功了</funny-com>
-    <p>{{message1}}</p>
-    <funny-com></funny-com>
-    <p>{{message2}}</p>
+<div id='childentity'>
+    <input-inside ref="child"></input-inside>
+    <button style="margin:10px auto;" @click="onFocus">父组件获取焦点按钮</button>
+    <p>通过ref特性获取组件，并调用组件的公共方法</p>
 </div>
 </template>
 
 <script>
 //import 《组件名称》 from '《组件路径》';
-import FunnyCom from '../../views/FunnyCom'
+import InputInside from '../../views/InputInside'
 
 export default {
-name:'slot-com',
+name:'childentity',
 components: {
-    FunnyCom
+    InputInside
 },
 data() {
 return {
-    message1: "最简单的插槽，只要用<slot></slot>包裹即可",
-    message2: "在<slot></slot>标签之间输入内容，即可成为插槽的默认值"
+
 };
 },
 computed: {},
 watch: {},
 methods: {
-
+    onFocus: function () {
+        this.$refs.child.focus();
+    }
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {

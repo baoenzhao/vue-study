@@ -1,32 +1,28 @@
 <!--  -->
 <template>
-<div id='slot-com'>
-    <funny-com>我插入成功了</funny-com>
-    <p>{{message1}}</p>
-    <funny-com></funny-com>
-    <p>{{message2}}</p>
+<div id='child-com'>
+    <button class="btn" @click="parentMethod">子组件按钮</button>
 </div>
 </template>
 
 <script>
 //import 《组件名称》 from '《组件路径》';
-import FunnyCom from '../../views/FunnyCom'
 
 export default {
-name:'slot-com',
-components: {
-    FunnyCom
-},
+name:'child-com',
+components: {},
+inject: ['randomNumber'],//获取父组件中的方法
 data() {
 return {
-    message1: "最简单的插槽，只要用<slot></slot>包裹即可",
-    message2: "在<slot></slot>标签之间输入内容，即可成为插槽的默认值"
+
 };
 },
 computed: {},
 watch: {},
 methods: {
-
+    parentMethod: function () {
+        this.randomNumber();//触发父组件传递的方法
+    }
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
@@ -46,5 +42,8 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
 <style scoped>
+.btn {
+    margin: 10px auto;
+}
 
 </style>

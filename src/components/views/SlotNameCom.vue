@@ -1,26 +1,27 @@
 <!--  -->
 <template>
-<div id='slot-com'>
-    <funny-com>我插入成功了</funny-com>
-    <p>{{message1}}</p>
-    <funny-com></funny-com>
-    <p>{{message2}}</p>
+<div id='slot-name-com'>
+    <header>
+        <slot name="header">我是组件内的头部默认内容</slot>
+    </header>
+    <main>
+        <slot></slot>
+    </main>
+    <footer>
+        <slot name="footer"></slot>
+    </footer>
 </div>
 </template>
 
 <script>
 //import 《组件名称》 from '《组件路径》';
-import FunnyCom from '../../views/FunnyCom'
 
 export default {
-name:'slot-com',
-components: {
-    FunnyCom
-},
+name:'slot-name-com',
+components: {},
 data() {
 return {
-    message1: "最简单的插槽，只要用<slot></slot>包裹即可",
-    message2: "在<slot></slot>标签之间输入内容，即可成为插槽的默认值"
+
 };
 },
 computed: {},

@@ -26,6 +26,10 @@ import IsInsideCom from '@/components/modules/children/IsInsideCom'
 import Propvalidate from '@/components/modules/children/Propvalidate'
 import InputListeners from '@/components/modules/children/InputListeners'
 import SyncProp from '@/components/modules/children/SyncProp'
+import SlotName from '@/components/modules/children/SlotName'
+import SlotRange from '@/components/modules/children/SlotRange'
+import ChildEntity from '@/components/modules/children/ChildEntity'
+import DependsTo from '@/components/modules/children/DependsTo'
 
 var array = [
     {
@@ -34,6 +38,7 @@ var array = [
     },
     {
         path: "vbind",
+        // component: resolve => require(['@/components/modules/children/Vbind'], resolve)//懒加载
         component: Vbind
     },
     {
@@ -139,6 +144,22 @@ var array = [
     {
         path: "syncprop",
         component: SyncProp
+    },
+    {
+        path: "slotname",
+        component: SlotName
+    },
+    {
+        path: "slotrange",
+        component: SlotRange
+    },
+    {
+        path: "childentity",
+        component: ChildEntity
+    },
+    {
+        path: "dependsto",
+        component: DependsTo
     }
 ];
 

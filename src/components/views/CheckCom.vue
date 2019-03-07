@@ -23,6 +23,9 @@
 //import 《组件名称》 from '《组件路径》';
 
 export default {
+  resolve: {
+
+  },
   name: "check-com",
   //   props: ["value"],
   components: {},

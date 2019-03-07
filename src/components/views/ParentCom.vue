@@ -1,32 +1,41 @@
 <!--  -->
 <template>
-<div id='slot-com'>
-    <funny-com>我插入成功了</funny-com>
-    <p>{{message1}}</p>
-    <funny-com></funny-com>
-    <p>{{message2}}</p>
+<div id='parent-com'>
+    <ul>
+        <li v-for="n in m" :key="n">
+            {{n}}
+        </li>
+    </ul>
+    <slot></slot>
 </div>
 </template>
 
 <script>
 //import 《组件名称》 from '《组件路径》';
-import FunnyCom from '../../views/FunnyCom'
 
 export default {
-name:'slot-com',
-components: {
-    FunnyCom
-},
+name:'parent-com',
+components: {},
 data() {
 return {
-    message1: "最简单的插槽，只要用<slot></slot>包裹即可",
-    message2: "在<slot></slot>标签之间输入内容，即可成为插槽的默认值"
+    m: 10
 };
+},
+provide () {//该属性可以提供给子组件方法
+    return {
+        randomNumber: this.randomNumber
+    }
 },
 computed: {},
 watch: {},
 methods: {
-
+    randomNumber: function () {
+        this.m = Math.ceil(Math.random()*10);
+        this.$notify({
+          title: '提示',
+          message: '成功触发父组件随机数字方法',
+        });
+    }
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
@@ -46,5 +55,10 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
 <style scoped>
-
+li {
+    display: inline-block;
+    padding: 5px;
+    margin: 0px 5px;
+    border: 0.5px solid black;
+}
 </style>

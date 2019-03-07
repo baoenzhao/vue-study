@@ -1,22 +1,28 @@
 <!--  -->
 <template>
-  <div id="funny-com">
-    <p style="font-size:20px;">
-      <img class="smile" src="../../assets/smile.png" alt="笑脸">
-      <slot>我是默认值</slot>
-      <img class="smile" src="../../assets/smile.png" alt="笑脸">
-    </p>
+  <div id="slotname">
+    <slot-name-com>
+      <template #header>父组件头部内容</template>主体内容
+      <template v-slot:footer>父组件尾部内容</template>主体内容2
+    </slot-name-com>
+    <p>{{message}}</p>
+    <p>未被包裹在template中的内容，会被默认为默认插槽内的内容</p>
+    <p style="color:red;">使用#缩写v-slot:</p>
   </div>
 </template>
 
 <script>
 //import 《组件名称》 from '《组件路径》';
+import SlotNameCom from "../../views/SlotNameCom";
 
 export default {
-  name: "funny-com",
-  components: {},
+  name: "slotname",
+  components: {
+    SlotNameCom
+  },
   data() {
     return {
+        message: "一个不带 name 的 <slot> 出口会带有隐含的名字“default”。"
     };
   },
   computed: {},
@@ -36,8 +42,4 @@ export default {
 };
 </script>
 <style scoped>
-.smile {
-  width: 30px;
-  height: 30px;
-}
 </style>

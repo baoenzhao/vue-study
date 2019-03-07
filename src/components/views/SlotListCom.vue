@@ -1,11 +1,11 @@
 <!--  -->
 <template>
-  <div id="funny-com">
-    <p style="font-size:20px;">
-      <img class="smile" src="../../assets/smile.png" alt="笑脸">
-      <slot>我是默认值</slot>
-      <img class="smile" src="../../assets/smile.png" alt="笑脸">
-    </p>
+  <div id="slot-list-com">
+    <ul>
+      <li v-for="(game, index) in games" :key="index">
+        <slot name="game" :game="game">{{game.name}}</slot>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -13,11 +13,13 @@
 //import 《组件名称》 from '《组件路径》';
 
 export default {
-  name: "funny-com",
+  name: "slot-list-com",
+  props: {
+    games: Array
+  },
   components: {},
   data() {
-    return {
-    };
+    return {};
   },
   computed: {},
   watch: {},
@@ -36,8 +38,4 @@ export default {
 };
 </script>
 <style scoped>
-.smile {
-  width: 30px;
-  height: 30px;
-}
 </style>

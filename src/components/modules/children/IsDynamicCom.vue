@@ -12,6 +12,15 @@
     </div>
     <p>:is 绑定可以动态改变组件，组件不会复用，每次都会重新渲染</p>
     <p>动态改变组件的变量可以是字符串，也可以是一个组件对象</p>
+    <br>
+    <p style="color:red;">{{message}}</p>
+    <p>下面是缓存了组件的内容</p>
+    <keep-alive>
+        <div class="com">
+        <component :is="currentCom" v-model="fruit" @close="closeMethod">插槽内容</component>
+        <h1 v-show="showFruit">我爱吃{{fruit}}</h1>
+    </div>
+    </keep-alive>
 </div>
 </template>
 
@@ -33,6 +42,7 @@ return {
     currentCom: "check-com",
     fruit: "",
     showFruit: true,
+    message: "如果想要缓存组件，而不是每次进行重新渲染，可以使用<keep-alive></keep-alive>包裹"
 };
 },
 computed: {},

@@ -118,7 +118,28 @@
             {
                 "name": ".syns：组件内双向绑定",
                 "path": "/syncprop"
+            },
+            {
+                "name": "具名插槽",
+                "path": "/slotname"
+            },
+            {
+                "name": "作用域插槽",
+                "path": "/slotrange"
+            },
+            {
+                "name": "子组件实例",
+                "path": "/childentity"
+            },
+            {
+                "name": "依赖注入",
+                "path": "/dependsto"
             }
+        ]
+    },
+    {
+        "name": "过渡&动画",
+        "sub": [
         ]
     }
 ]
