@@ -140,6 +140,43 @@
     {
         "name": "过渡&动画",
         "sub": [
+            {
+                "name": "简单过渡",
+                "path": "/simpletransition"
+            },
+            {
+                "name": "简单动画",
+                "path": "/simpleanimation"
+            },
+            {
+                "name": "过渡模式",
+                "path": "/transitionmode"
+            },
+            {
+                "name": "列表过渡",
+                "path": "/transitionlist"
+            }
+        ]
+    },
+    {
+        "name": "可复用性&组合",
+        "sub": [
+            {
+                "name": "全局混入对象",
+                "path": "/globalmixin"
+            },
+            {
+                "name": "全局自定义指令",
+                "path": "/globalcommand"
+            },
+            {
+                "name": "函数式组件",
+                "path": "/functioncomponent"
+            },
+            {
+                "name": "全局过滤器",
+                "path": "/globalfilters"
+            }
         ]
     }
 ]

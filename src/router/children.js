@@ -30,6 +30,14 @@ import SlotName from '@/components/modules/children/SlotName'
 import SlotRange from '@/components/modules/children/SlotRange'
 import ChildEntity from '@/components/modules/children/ChildEntity'
 import DependsTo from '@/components/modules/children/DependsTo'
+import SimpleTransition from '@/components/modules/children/SimpleTransition'
+import SimpleAnimation from '@/components/modules/children/SimpleAnimation'
+import TransitionMode from '@/components/modules/children/TransitionMode'
+import TransitionList from '@/components/modules/children/TransitionList'
+import GlobalMixin from '@/components/modules/children/GlobalMixin'
+import GlobalCommand from '@/components/modules/children/GlobalCommand'
+import FunctionComponent from '@/components/modules/children/FunctionComponent'
+import GlobalFilters from '@/components/modules/children/GlobalFilters'
 
 var array = [
     {
@@ -160,6 +168,38 @@ var array = [
     {
         path: "dependsto",
         component: DependsTo
+    },
+    {
+        path: "simpletransition",
+        component: SimpleTransition
+    },
+    {
+        path: "simpleanimation",
+        component: SimpleAnimation
+    },
+    {
+        path: "transitionmode",
+        component: TransitionMode
+    },
+    {
+        path: "transitionlist",
+        component: TransitionList
+    },
+    {
+        path: "globalmixin",
+        component: GlobalMixin
+    },
+    {
+        path: "globalcommand",
+        component: GlobalCommand
+    },
+    {
+        path: "functioncomponent",
+        component: FunctionComponent
+    },
+    {
+        path: "globalfilters",
+        component: GlobalFilters
     }
 ];
 
