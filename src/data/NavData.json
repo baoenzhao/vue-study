@@ -178,5 +178,50 @@
                 "path": "/globalfilters"
             }
         ]
+    },
+    {
+        "name": "Vuex",
+        "sub": [
+            {
+                "name": "State",
+                "path": "/vuexstate"
+            },
+            {
+                "name": "mapState",
+                "path": "/vuexmapstate"
+            },
+            {
+                "name": "Getter",
+                "path": "/vuexgetter"
+            },
+            {
+                "name": "mapGetters",
+                "path": "/vuexmapgetters"
+            },
+            {
+                "name": "Mutation",
+                "path": "/vuexmutation"
+            },
+            {
+                "name": "mapMutations",
+                "path": "/vuexmapmutations"
+            },
+            {
+                "name": "Action",
+                "path": "/vuexaction"
+            },
+            {
+                "name": "mapActions",
+                "path": "/vuexmapactions"
+            },
+            {
+                "name": "Modules",
+                "path": "/vuexmodules"
+            },
+            {
+                "name": "命名空间",
+                "path": "/vuexnamespaced"
+            }
+        ]
     }
 ]

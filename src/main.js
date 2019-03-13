@@ -5,6 +5,7 @@ import App from './App'
 import router from './router/router'//引用路由
 import ElementUI from 'element-ui';//导入element UI库
 import 'element-ui/lib/theme-chalk/index.css';//导入UI库所需的css
+import store from './store/store'//引用vuex
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);//使用element UI库
@@ -41,6 +42,7 @@ Vue.filter('happy', function (value) {
 /* eslint-disable no-new */
 new Vue({
   router,//使用路由对象
+  store,
   el: '#app',
   components: { App },
   template: '<App/>'

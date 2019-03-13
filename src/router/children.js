@@ -38,6 +38,16 @@ import GlobalMixin from '@/components/modules/children/GlobalMixin'
 import GlobalCommand from '@/components/modules/children/GlobalCommand'
 import FunctionComponent from '@/components/modules/children/FunctionComponent'
 import GlobalFilters from '@/components/modules/children/GlobalFilters'
+import VuexState from '@/components/modules/children/VuexState'
+import VuexMapstate from '@/components/modules/children/VuexMapstate'
+import VuexGetter from '@/components/modules/children/VuexGetter'
+import VuexMapGetters from '@/components/modules/children/VuexMapGetters'
+import VuexMutation from '@/components/modules/children/VuexMutation'
+import VuexMapMutations from '@/components/modules/children/VuexMapMutations'
+import VuexAction from '@/components/modules/children/VuexAction'
+import VuexMapActions from '@/components/modules/children/VuexMapActions'
+import VuexModules from '@/components/modules/children/VuexModules'
+import VuexNamespaced from '@/components/modules/children/VuexNamespaced'
 
 var array = [
     {
@@ -200,6 +210,46 @@ var array = [
     {
         path: "globalfilters",
         component: GlobalFilters
+    },
+    {
+        path: "vuexstate",
+        component: VuexState
+    },
+    {
+        path: "vuexmapstate",
+        component: VuexMapstate
+    },
+    {
+        path: "vuexgetter",
+        component: VuexGetter
+    },
+    {
+        path: "vuexmapgetters",
+        component: VuexMapGetters
+    },
+    {
+        path: "vuexmutation",
+        component: VuexMutation
+    },
+    {
+        path: "vuexmapmutations",
+        component: VuexMapMutations
+    },
+    {
+        path: "vuexaction",
+        component: VuexAction
+    },
+    {
+        path: "vuexmapactions",
+        component: VuexMapActions
+    },
+    {
+        path: "vuexmodules",
+        component: VuexModules
+    },
+    {
+        path: "vuexnamespaced",
+        component: VuexNamespaced
     }
 ];
 
