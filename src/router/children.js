@@ -1,3 +1,5 @@
+import sub from './StudyRouter'
+
 import Evaluate from '@/components/modules/children/Evaluate'
 import Vbind from '@/components/modules/children/Vbind'
 import Vmodel from '@/components/modules/children/Vmodel'
@@ -48,208 +50,246 @@ import VuexAction from '@/components/modules/children/VuexAction'
 import VuexMapActions from '@/components/modules/children/VuexMapActions'
 import VuexModules from '@/components/modules/children/VuexModules'
 import VuexNamespaced from '@/components/modules/children/VuexNamespaced'
+import SimpleRouter from '@/components/modules/children/SimpleRouter'
+import DynamicRouter from '@/components/modules/children/DynamicRouter'
+import ErrorRouter from '@/components/modules/children/ErrorRouter'
+import RouterChildren from '@/components/modules/children/RouterChildren'
+import RouterCode from '@/components/modules/children/RouterCode'
+import RouterNameView from '@/components/modules/children/RouterNameView'
 
-var array = [
+const array = [
     {
-        path: "evaluate",
+        path: "/evaluate",
         component: Evaluate
     },
     {
-        path: "vbind",
+        path: "/vbind",
         // component: resolve => require(['@/components/modules/children/Vbind'], resolve)//懒加载
         component: Vbind
     },
     {
-        path: "vmodel",
+        path: "/vmodel",
         component: Vmodel
     },
     {
-        path: "vif",
+        path: "/vif",
         component: Vif
     },
     {
-        path: "vshow",
+        path: "/vshow",
         component: Vshow
     },
     {
-        path: "vfor",
+        path: "/vfor",
         component: Vfor
     },
     {
-        path: "von",
+        path: "/von",
         component: Von
     },
     {
-        path: "simplecomponent",
+        path: "/simplecomponent",
         component: SimpleComponent
     },
     {
-        path: "lifemethod",
+        path: "/lifemethod",
         component: LifeMethod
     },
     {
-        path: "vonce",
+        path: "/vonce",
         component: Vonce
     },
     {
-        path: "vhtml",
+        path: "/vhtml",
         component: Vhtml
     },
     {
-        path: "dynamicparam",
+        path: "/dynamicparam",
         component: Dynamicparam
     },
     {
-        path: "modifier",
+        path: "/modifier",
         component: Modifier
     },
     {
-        path: "computer",
+        path: "/computer",
         component: Computer
     },
     {
-        path: "watch",
+        path: "/watch",
         component: Watch
     },
     {
-        path: "dynamicclass",
+        path: "/dynamicclass",
         component: DynamicClass
     },
     {
-        path: "dynamicstyle",
+        path: "/dynamicstyle",
         component: DynamicStyle
     },
     {
-        path: "keyreuse",
+        path: "/keyreuse",
         component: KeyReuse
     },
     {
-        path: "arrayupdate",
+        path: "/arrayupdate",
         component: ArrayUpdate
     },
     {
-        path: "objaddattr",
+        path: "/objaddattr",
         component: ObjAddAttr
     },
     {
-        path: "emitcom",
+        path: "/emitcom",
         component: EmitCom
     },
     {
-        path: "vmodelcom",
+        path: "/vmodelcom",
         component: VmodelCom
     },
     {
-        path: "slotcom",
+        path: "/slotcom",
         component: SlotCom
     },
     {
-        path: "isdynamiccom",
+        path: "/isdynamiccom",
         component: IsDynamicCom
     },
     {
-        path: "isinsidecom",
+        path: "/isinsidecom",
         component: IsInsideCom
     },
     {
-        path: "propvalidate",
+        path: "/propvalidate",
         component: Propvalidate
     },
     {
-        path: "inputlisteners",
+        path: "/inputlisteners",
         component: InputListeners
     },
     {
-        path: "syncprop",
+        path: "/syncprop",
         component: SyncProp
     },
     {
-        path: "slotname",
+        path: "/slotname",
         component: SlotName
     },
     {
-        path: "slotrange",
+        path: "/slotrange",
         component: SlotRange
     },
     {
-        path: "childentity",
+        path: "/childentity",
         component: ChildEntity
     },
     {
-        path: "dependsto",
+        path: "/dependsto",
         component: DependsTo
     },
     {
-        path: "simpletransition",
+        path: "/simpletransition",
         component: SimpleTransition
     },
     {
-        path: "simpleanimation",
+        path: "/simpleanimation",
         component: SimpleAnimation
     },
     {
-        path: "transitionmode",
+        path: "/transitionmode",
         component: TransitionMode
     },
     {
-        path: "transitionlist",
+        path: "/transitionlist",
         component: TransitionList
     },
     {
-        path: "globalmixin",
+        path: "/globalmixin",
         component: GlobalMixin
     },
     {
-        path: "globalcommand",
+        path: "/globalcommand",
         component: GlobalCommand
     },
     {
-        path: "functioncomponent",
+        path: "/functioncomponent",
         component: FunctionComponent
     },
     {
-        path: "globalfilters",
+        path: "/globalfilters",
         component: GlobalFilters
     },
     {
-        path: "vuexstate",
+        path: "/vuexstate",
         component: VuexState
     },
     {
-        path: "vuexmapstate",
+        path: "/vuexmapstate",
         component: VuexMapstate
     },
     {
-        path: "vuexgetter",
+        path: "/vuexgetter",
         component: VuexGetter
     },
     {
-        path: "vuexmapgetters",
+        path: "/vuexmapgetters",
         component: VuexMapGetters
     },
     {
-        path: "vuexmutation",
+        path: "/vuexmutation",
         component: VuexMutation
     },
     {
-        path: "vuexmapmutations",
+        path: "/vuexmapmutations",
         component: VuexMapMutations
     },
     {
-        path: "vuexaction",
+        path: "/vuexaction",
         component: VuexAction
     },
     {
-        path: "vuexmapactions",
+        path: "/vuexmapactions",
         component: VuexMapActions
     },
     {
-        path: "vuexmodules",
+        path: "/vuexmodules",
         component: VuexModules
     },
     {
-        path: "vuexnamespaced",
+        path: "/vuexnamespaced",
         component: VuexNamespaced
+    },
+    {
+        path: "/simplerouter",
+        redirect: "/componenta",//默认子路由页面
+        component: SimpleRouter,
+        children: sub.children1
+    },
+    {
+        path: "/dynamicrouter",
+        redirect: "/componentb/名称",//默认子路由页面
+        component: DynamicRouter,
+        children: sub.children2
+    },
+    {
+        path: "/errorrouter",
+        component: ErrorRouter,
+    },
+    {
+        path: "/routerchildren",
+        component: RouterChildren
+    },
+    {
+        path: "/routercode",
+        component: RouterCode,
+        redirect: "/componentc/默认页面",//默认子路由页面
+        children: sub.children3
+    },
+    {
+        path: "/routernameview",
+        component: RouterNameView,
+        redirect: "/componente",//默认子路由页面
+        children: sub.children4
     }
 ];
 

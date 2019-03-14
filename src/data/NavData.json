@@ -223,5 +223,34 @@
                 "path": "/vuexnamespaced"
             }
         ]
+    },
+    {
+        "name": "vue-router",
+        "sub": [
+            {
+                "name": "简单的路由",
+                "path": "/simplerouter"
+            },
+            {
+                "name": "动态路由",
+                "path": "/dynamicrouter"
+            },
+            {
+                "name": "404页面",
+                "path": "/errorrouter"
+            },
+            {
+                "name": "路由嵌套",
+                "path": "/routerchildren"
+            },
+            {
+                "name": "编程式导航",
+                "path": "/routercode"
+            },
+            {
+                "name": "命名视图",
+                "path": "/routernameview"
+            }
+        ]
     }
 ]

@@ -24,20 +24,27 @@ Vue.directive('modeA', {//全局自定义指令
       el.focus();
     }
   }
-}
-)
+})
 Vue.directive('red', {
   inserted: function (el) {
     if (el.localName == "p") {
       el.style.color = "red";
     }
   }
-}
-)
+})
+Vue.directive('center', {
+  inserted: function (el) {
+    el.style.display = "flex";
+    el.style.alignItems = "center";
+    el.style.justifyContent = "center";
+    el.style.marginTop = "10px";
+    el.style.marginBottom = "10px";
+    el.style.flexWrap = "wrap";
+  }
+})
 Vue.filter('happy', function (value) {
   return value + " 我是过滤内容";
-}
-)
+})
 
 /* eslint-disable no-new */
 new Vue({

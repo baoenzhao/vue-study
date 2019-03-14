@@ -4,8 +4,8 @@
     <el-row type="flex" justify="space-between">
       <el-col :span="4">
         <div class="col">
-          <el-menu router="router" :default-active="$route.path">
-            <el-submenu v-for="(obj, index1) in list" :key="index1" :index="index1.toString()">
+          <el-menu class="main-menu" router="router" :default-active="$route.path">
+            <el-submenu class="sub-menu" v-for="(obj, index1) in list" :key="index1" :index="index1.toString()">
               <template slot="title">
                 <span>{{obj.name}}</span>
               </template>
@@ -68,4 +68,8 @@ export default {
   overflow: scroll;
   height: 800px;
 }
+.main-menu {
+  background-color: rgb(212, 247, 179);
+}
+
 </style>

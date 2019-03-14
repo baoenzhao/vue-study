@@ -55,5 +55,12 @@ h1.top-title {
   text-align: center;
   font: 25px bold;
 }
+.square {
+    background-color: rgb(233, 97, 97);
+    color: white;
+    width: 200px;
+    text-align:center;
+    padding: 50px 0px;
+}
 </style>
 
