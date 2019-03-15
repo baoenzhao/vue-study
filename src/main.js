@@ -6,9 +6,13 @@ import router from './router/router'//引用路由
 import ElementUI from 'element-ui';//导入element UI库
 import 'element-ui/lib/theme-chalk/index.css';//导入UI库所需的css
 import store from './store/store'//引用vuex
+import axios from 'axios'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);//使用element UI库
+
+Vue.prototype.$http = axios//使用$http来取axios别名
+axios.defaults.headers = {'Content-Type': 'application/json;charset=UTF-8'};
 
 Vue.mixin({//全局混入对象
   created: function () {

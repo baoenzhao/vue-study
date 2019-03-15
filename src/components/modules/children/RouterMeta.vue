@@ -1,7 +1,8 @@
 <!--  -->
 <template>
-<div id='componenta'>
-    <div class="square">{{name}}</div>
+<div id='routermeta'>
+    <p>查看控制台，打印了“这是个需要登录的界面”</p>
+    <p>元信息一般用来控制是否需要登录的界面</p>
 </div>
 </template>
 
@@ -9,30 +10,24 @@
 //import 《组件名称》 from '《组件路径》';
 
 export default {
-name:'componenta',
-props: ['title'],
+name:'routermeta',
 components: {},
 data() {
 return {
 
 };
 },
-computed: {
-    name: function () {
-        if (this.title != undefined) return this.title;
-        return this.$route.params.title == undefined ? "组件A" : this.$route.params.title;
-    }
-},
+computed: {},
 watch: {},
 methods: {
 
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
+
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {
-
 },
 beforeCreate() {}, //生命周期 - 创建之前
 beforeMount() {}, //生命周期 - 挂载之前

@@ -1,7 +1,9 @@
 <!--  -->
 <template>
-<div id='componenta'>
-    <div class="square">{{name}}</div>
+<div id='routerscrollbehavior'>
+    <p>可以通过在路由器中配置scrollBehavior来进行每次页面进入滚动到顶部的行为</p>
+    <p>这个功能只在支持 history.pushState 中可用</p>
+    <p v-red>查看该源代码滚动行为移步到router.js中</p>
 </div>
 </template>
 
@@ -9,26 +11,21 @@
 //import 《组件名称》 from '《组件路径》';
 
 export default {
-name:'componenta',
-props: ['title'],
+name:'routerscrollbehavior',
 components: {},
 data() {
 return {
 
 };
 },
-computed: {
-    name: function () {
-        if (this.title != undefined) return this.title;
-        return this.$route.params.title == undefined ? "组件A" : this.$route.params.title;
-    }
-},
+computed: {},
 watch: {},
 methods: {
 
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
+
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {

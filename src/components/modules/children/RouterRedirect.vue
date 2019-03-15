@@ -1,7 +1,8 @@
 <!--  -->
 <template>
-<div id='componenta'>
-    <div class="square">{{name}}</div>
+<div id='routerredirect'>
+    <p>重定向和别名内容可以去children.js查看</p>
+    <p>当前页面使用了别名，更换最后一个地址为othername，展示的还是当前页面</p>
 </div>
 </template>
 
@@ -9,26 +10,21 @@
 //import 《组件名称》 from '《组件路径》';
 
 export default {
-name:'componenta',
-props: ['title'],
+name:'routerredirect',
 components: {},
 data() {
 return {
 
 };
 },
-computed: {
-    name: function () {
-        if (this.title != undefined) return this.title;
-        return this.$route.params.title == undefined ? "组件A" : this.$route.params.title;
-    }
-},
+computed: {},
 watch: {},
 methods: {
 
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
+
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {

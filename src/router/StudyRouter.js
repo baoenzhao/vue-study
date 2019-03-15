@@ -44,6 +44,7 @@ const children4 = [
     {
         path: '/componente',
         component: ComponentD,
+        name: 'ComponentE',
         redirect: '/nameview',
         children: [
             {
@@ -57,12 +58,27 @@ const children4 = [
         ]
     },
 ]
+//编程式导航
+const children5 = [
+    {
+        path: '/componentf/:title',
+        component: ComponentA,
+        props: true
+    },
+    {
+        path: '/componentg',
+        component: ComponentA,
+        name: 'ComponentG',
+        props: (route) => ({ title: route.query.title })
+    }
+]
 
 const sub = {
     children1: children1,
     children2: children2,
     children3: children3,
-    children4: children4
+    children4: children4,
+    children5: children5
 }
 
 export default sub

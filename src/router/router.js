@@ -20,11 +20,24 @@ const routes = [
 
 const router = new VueRouter({
     // mode:"history",//路由时去掉#
-    routes
+    routes,
+    scrollBehavior (to, from, savedPosition) {
+        return { x: 0, y: 0 };
+    }
 })
 
-router.afterEach((to, from, next) => {
-    window.scroll(0, 0);//跳转到顶部
+router.afterEach((to, from) => {
+    // window.scroll(0, 0);//跳转到顶部
+})
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(record => record.meta.isLogin)) {
+        console.log("这是个需要登录的界面");
+        next();
+    }
+    else {
+        next();
+    }
 })
 
 export default router

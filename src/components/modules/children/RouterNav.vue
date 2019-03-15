@@ -1,7 +1,8 @@
 <!--  -->
 <template>
-<div id='componenta'>
-    <div class="square">{{name}}</div>
+<div id='routernav'>
+    <p>查看控制台信息，打印“路由进入之前”</p>
+    <p>导航的解析流程<a href="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E7%BB%84%E4%BB%B6%E5%86%85%E7%9A%84%E5%AE%88%E5%8D%AB">在此底部</a></p>
 </div>
 </template>
 
@@ -9,26 +10,21 @@
 //import 《组件名称》 from '《组件路径》';
 
 export default {
-name:'componenta',
-props: ['title'],
+name:'routernav',
 components: {},
 data() {
 return {
 
 };
 },
-computed: {
-    name: function () {
-        if (this.title != undefined) return this.title;
-        return this.$route.params.title == undefined ? "组件A" : this.$route.params.title;
-    }
-},
+computed: {},
 watch: {},
 methods: {
 
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
+
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {

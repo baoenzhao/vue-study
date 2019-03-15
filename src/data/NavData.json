@@ -250,6 +250,39 @@
             {
                 "name": "命名视图",
                 "path": "/routernameview"
+            },
+            {
+                "name": "重定向和别名",
+                "path": "/routerredirect"
+            },
+            {
+                "name": "路由组件传参",
+                "path": "/routercomponentprops"
+            },
+            {
+                "name": "导航守卫",
+                "path": "/routernav"
+            },
+            {
+                "name": "路由元信息",
+                "path": "/routermeta"
+            },
+            {
+                "name": "滚动行为",
+                "path": "/routerscrollbehavior"
+            }
+        ]
+    },
+    {
+        "name": "axios",
+        "sub": [
+            {
+                "name": "简单请求",
+                "path": "/axiosreq"
+            },
+            {
+                "name": "请求参数",
+                "path": "/axiosreqparams"
             }
         ]
     }

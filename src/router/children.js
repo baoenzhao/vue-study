@@ -56,6 +56,13 @@ import ErrorRouter from '@/components/modules/children/ErrorRouter'
 import RouterChildren from '@/components/modules/children/RouterChildren'
 import RouterCode from '@/components/modules/children/RouterCode'
 import RouterNameView from '@/components/modules/children/RouterNameView'
+import RouterRedirect from '@/components/modules/children/RouterRedirect'
+import RouterComponentProps from '@/components/modules/children/RouterComponentProps'
+import RouterNav from '@/components/modules/children/RouterNav'
+import RouterMeta from '@/components/modules/children/RouterMeta'
+const RouterScrollBehavior = () => import('@/components/modules/children/RouterScrollBehavior')//使用此方法可以进行路由的懒加载
+const AxiosReq = () => import('@/components/modules/children/AxiosReq')
+const AxiosReqParams = () => import('@/components/modules/children/AxiosReqParams')
 
 const array = [
     {
@@ -288,8 +295,43 @@ const array = [
     {
         path: "/routernameview",
         component: RouterNameView,
-        redirect: "/componente",//默认子路由页面
+        redirect: { name: 'ComponentE' },//默认子路由页面
         children: sub.children4
+    },
+    {
+        path: "/routerredirect",
+        component: RouterRedirect,
+        alias: "/othername"
+    },
+    {
+        path: "/routercomponentprops",
+        component: RouterComponentProps,
+        children: sub.children5
+    },
+    {
+        path: "/routernav",
+        component: RouterNav,
+        beforeEnter: (to, from, next) => {
+            console.log('路由进入之前');
+            next();
+        }
+    },
+    {
+        path: "/routermeta",
+        component: RouterMeta,
+        meta: { isLogin: true }
+    },
+    {
+        path: "/routerscrollbehavior",
+        component: RouterScrollBehavior
+    },
+    {
+        path: "/axiosreq",
+        component: AxiosReq
+    },
+    {
+        path: "/axiosreqparams",
+        component: AxiosReqParams
     }
 ];
 
